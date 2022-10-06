@@ -7,15 +7,13 @@ function geradorInteiroUnico(){
 }
 
 let inteiroUnico = geradorInteiroUnico();
-// console.log(inteiroUnico());
-// console.log(inteiroUnico());
-console.log(inteiroUnico());
-console.log(inteiroUnico());
+
 const soma = (x, y) => {
     return x + y;
 }
 const numeroAleatorio = () => parseInt(Math.random()*100);
-let a = numeroAleatorio();
-console.log(soma(4,5));
-//let a = soma(inteiroUnico(), inteiroUnico());
-console.log(a);
+let C = 32;
+const CtoK = (celsius) => celsius + 273.15;
+const CtoF = (celsius) => (celsius*9/5) + 32;
+console.log(CtoK(C));
+console.log(CtoF(C));
