@@ -13,7 +13,7 @@ const soma = (x, y) => {
 }
 const numeroAleatorio = () => parseInt(Math.random()*100);
 let C = 32;
-const CtoK = (celsius) => celsius + 273.15;
-const CtoF = (celsius) => (celsius*9/5) + 32;
-console.log(CtoK(C));
-console.log(CtoF(C));
+CtoK = (celsius) => celsius + 273.15;
+CtoF = (celsius) => (celsius*9/5) + 32;
+console.log(`celsius para kelvin: ${CtoK(C)}`);
+console.log(`celsius para fahrenheit: ${CtoF(C)}`);
