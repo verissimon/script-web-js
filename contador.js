@@ -1,14 +1,14 @@
 class Contador {
     constructor(inicial){
-        this.inicio = inicial; 
+        this.num = inicial; 
     }
     incrementar() {
-        return this.inicio += 1;
+        return this.num += 1;
     }
     decrementar(){
-        return this.inicio -= 1;
+        return this.num -= 1;
     }
 }
-let num = new Contador(5);
-console.log(num)
-console.log(num.incrementar());
+let numero = new Contador(5);
+console.log(numero)
+console.log(numero.incrementar());
