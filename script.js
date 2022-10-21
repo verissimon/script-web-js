@@ -15,9 +15,12 @@ const numeroAleatorio = () => parseInt(Math.random()*100);
 let C = 32;
 CtoK = (celsius) => celsius + 273.15;
 CtoF = (celsius) => (celsius*9/5) + 32;
-console.log(`celsius para kelvin: ${CtoK(C)}`);
-console.log(`celsius para fahrenheit: ${CtoF(C)}`);
+// console.log(`celsius para kelvin: ${CtoK(C)}`);
+// console.log(`celsius para fahrenheit: ${CtoF(C)}`);
 //----------------------
+//QUERY SELECTOR
+//----------------------
+
 let objeto = new Object();
 objeto.nome = "fulano";
 objeto.sobrenome = "de tal";
@@ -38,3 +41,11 @@ const itensLista = document.querySelectorAll("li");
 for(let index = 0; index < itensLista.length; index++){
 	itensLista[index].textContent =  `${index + 1}. ${itensLista[index].textContent}`;
 }
+//----------------------
+// APPEND CHILD
+//----------------------
+let elementoBody = document.querySelector("#lista");
+elementoBody.textContent = `asopdjioasij jfjiasji jifja`
+let novoP = document.createElement("p");
+elementoBody.appendChild(novoP);
+novoP.textContent = "apsodj"
