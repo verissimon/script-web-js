@@ -1,11 +1,10 @@
 let input = document.querySelector("input");
-// input.addEventListener("keydown", () => {
-//     console.log(input.value);
-// });
+
 let textoLista = document.querySelector("#elementoLista");
-// let textoNovoItem = document.createElement("span");
-// textoNovoItem.textContent = input.value;
-// textoLista.appendChild(textoNovoItem);
+function delete_parent(e) {
+    e.parentElement.remove();
+}
+
 let botao = document.querySelector(".btn");
 botao.addEventListener("click", function() {
     let textoNovoItem = document.createElement("div");
@@ -13,17 +12,8 @@ botao.addEventListener("click", function() {
     textoNovoItem.textContent = input.value;
     textoLista.appendChild(textoNovoItem);
     let rmv = document.createElement("button");
-    rmv.classList.add("rmv");
     rmv.textContent = "Remover";
     textoNovoItem.appendChild(rmv);
-    remover();
+    rmv.addEventListener('click', () => textoNovoItem.remove());
 });
-    function remover() {
-    let rmvBotao = document.getElementsByClassName("rmv");
-    rmvBotao.onclick = function() {
-        alert("clicou remover");
-        // element = document.querySelector(".item-lista");
-        // element.remove();
-        textoNovoItem.remove();
-    };
-    }
+
